@@ -1,0 +1,13 @@
+/* Basic styling handled by global utility classes */
+.icon-btn {
+    padding: 6px;
+    background: #F8FAFC;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover {
+    background: #E2E8F0;
+}

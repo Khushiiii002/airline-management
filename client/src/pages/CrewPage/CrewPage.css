@@ -1,0 +1,22 @@
+.role-badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.role-pilot {
+    background: #0F172A;
+    color: #F8FAFC;
+}
+
+.role-co-pilot {
+    background: #334155;
+    color: #F8FAFC;
+}
+
+.role-flight-attendant {
+    background: #E0F2FE;
+    color: #0369A1;
+}

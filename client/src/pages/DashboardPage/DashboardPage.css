@@ -1,0 +1,145 @@
+.dashboard-page {
+    padding-bottom: 40px;
+}
+
+.hero-banner {
+    background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+    color: white;
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::after {
+    content: "✈️";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 120px;
+    opacity: 0.1;
+    transform: rotate(-10deg);
+    pointer-events: none;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 12px;
+}
+
+.pill {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    backdrop-filter: blur(4px);
+}
+
+.pill.success {
+    background: rgba(16, 185, 129, 0.3);
+    font-weight: bold;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.revenue-card {
+    background: white;
+}
+
+.icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(16, 185, 129, 0.3);
+}
+
+.revenue-breakdown {
+    display: flex;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.rb-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.eco {
+    background: #64748B;
+}
+
+.dot.bus {
+    background: #4F46E5;
+}
+
+.dot.first {
+    background: #F59E0B;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: var(--bg);
+    border-radius: var(--radius);
+    transition: transform 0.2s;
+}
+
+.list-item:hover {
+    transform: translateX(4px);
+    background: #EFF6FF;
+}
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}

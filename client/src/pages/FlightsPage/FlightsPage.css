@@ -1,0 +1,140 @@
+.flights-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.search-card {
+    background: linear-gradient(to right bottom, #ffffff, #f8fafc);
+    border: 1px solid var(--border);
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+}
+
+.autocomplete-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    z-index: 50;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+    background: #EFF6FF;
+}
+
+.flight-card {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+    padding: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flight-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+}
+
+.carrier-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.airline-logo-placeholder {
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.airline-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.flight-route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flight-duration {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+}
+
+.route-line {
+    height: 2px;
+    background: #E2E8F0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plane-icon {
+    background: white;
+    padding: 0 4px;
+    color: var(--primary-light);
+}
+
+.flight-price {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+    .flight-card {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .flight-route {
+        margin: 16px 0;
+    }
+
+    .flight-price {
+        align-items: stretch;
+        margin-top: 16px;
+        border-top: 1px solid var(--border);
+        padding-top: 16px;
+    }
+
+    .price-tag {
+        text-align: center;
+        margin-bottom: 8px;
+    }
+}

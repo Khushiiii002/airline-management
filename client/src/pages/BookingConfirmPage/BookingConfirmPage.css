@@ -1,0 +1,131 @@
+.confirm-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.success-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.boarding-pass {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #E2E8F0;
+}
+
+.bp-top {
+    padding: 30px;
+}
+
+.booking-ref-box {
+    background: #FFF7ED;
+    color: var(--accent-dark);
+    font-weight: bold;
+    font-family: monospace;
+    padding: 4px 8px;
+    border: 1px dashed var(--accent);
+    border-radius: 4px;
+    font-size: 1.1rem;
+    margin-top: 4px;
+}
+
+.bp-divider {
+    height: 0;
+    border-top: 2px dashed #CBD5E1;
+    position: relative;
+    margin: 0 16px;
+}
+
+.bp-divider::before,
+.bp-divider::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    width: 24px;
+    height: 24px;
+    background: var(--bg);
+    border-radius: 50%;
+}
+
+.bp-divider::before {
+    left: -28px;
+}
+
+.bp-divider::after {
+    right: -28px;
+}
+
+.bp-bottom {
+    padding: 30px;
+    background: #F8FAFC;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 10px;
+}
+
+.info-item .label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.info-item .value {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.barcode {
+    font-family: 'Courier New', monospace;
+    letter-spacing: 4px;
+    text-align: center;
+    opacity: 0.3;
+    font-size: 1.5rem;
+    transform: scaleY(1.5);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .boarding-pass,
+    .boarding-pass * {
+        visibility: visible;
+    }
+
+    .boarding-pass {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: none;
+        border: 1px solid #000;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .bp-divider::before,
+    .bp-divider::after {
+        background: white;
+        border: 1px solid #000;
+    }
+}
+
+@media (max-width: 500px) {
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
