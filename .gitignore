@@ -17,6 +17,9 @@ dist/
 .env.development.local
 .env.test.local
 .env.production.local
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
 # Logs
 npm-debug.log*
@@ -31,3 +34,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Supabase
+supabase/.temp/
+.supabase/
